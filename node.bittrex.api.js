@@ -277,6 +277,9 @@ var NodeBittrexApi = function() {
     getcandles: function(options, callback) {
       publicApiCall(opts.baseUrlv2 + '/pub/market/GetTicks', callback, options);
     },
+    getLastestCandles: function(options, callback) {
+      publicApiCall(opts.baseUrlv2 + '/pub/market/GetLatestTick', callback, options)
+    },
     buylimit: function(options, callback) {
       credentialApiCall(opts.baseUrl + '/market/buylimit', callback, options);
     },
