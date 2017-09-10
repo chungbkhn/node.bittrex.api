@@ -9,9 +9,25 @@ bittrex.options({
   'cleartext' : false 
 });
 
+var mySql = require('./db.js');
+  mySql.startConnect( function (result) {
+    if (result) {
+        mySql.insertCandles30Min(10, 20, 30, 40, 232454, function (data, err) {
+            console.log('Insert: ' + data);
+        });
+    }
+    }
+);
+//
+// mySql.getAllCandles30Min(function( data, err ) {
+//   console.log( 'Data: ' + data );
+// });
+
+/*
 bittrex.getLastestCandles({
   marketName: 'USDT-BTC',
   tickInterval: 'thirtyMin', // intervals are keywords
 }, function( data, err ) {
   console.log( data );
 });
+*/
