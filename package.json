@@ -14,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "JSONStream": ">= 0.8.4",
+    "dbhelper": "^1.0.3",
     "event-stream": ">= 3.1.5",
     "jsonic": "^0.3.0",
     "mysql": "^2.14.1",
