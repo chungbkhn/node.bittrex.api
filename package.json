@@ -14,8 +14,10 @@
   "license": "MIT",
   "dependencies": {
     "JSONStream": ">= 0.8.4",
+    "dbhelper": "^1.0.3",
     "event-stream": ">= 3.1.5",
     "jsonic": "^0.3.0",
+    "mysql": "^2.14.1",
     "object-assign": "^4.1.1",
     "request": ">= 2.35.0",
     "signalr-client": "0.0.17"
