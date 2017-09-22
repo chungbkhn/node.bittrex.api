@@ -10,15 +10,19 @@ import UIKit
 
 class ChainGroupInvestmentBuilder: Builder<ChainGroupInvestment> {
 
-    func makeDailyInvestment(money: Double) {
+	func makeDailyInvestment(money: Double, numberOfDay: Int) {
         object.startMoneyInvest = money
-        object.totalStep = Constant.ChainGroup.Daily.totalDay
+        object.totalStep = numberOfDay
+		object.totalStepPackage = Constant.ChainGroup.Daily.totalDayPackage
         object.profitRate = Constant.ChainGroup.Daily.profitRate
+		object.invitationRate = Constant.ChainGroup.invitationRate
     }
     
-    func makeMonthlyInvestment(money: Double) {
+	func makeMonthlyInvestment(money: Double, numberOfMonth: Int) {
         object.startMoneyInvest = money
-        object.totalStep = Constant.ChainGroup.Monthly.totalMonth
+        object.totalStep = numberOfMonth
+		object.totalStepPackage = Constant.ChainGroup.Monthly.totalDayPackage
         object.profitRate = Constant.ChainGroup.Monthly.profitRate
+		object.invitationRate = Constant.ChainGroup.invitationRate
     }
 }

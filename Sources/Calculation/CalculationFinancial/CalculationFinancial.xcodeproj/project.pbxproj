@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A1DA77F81F72266600C26FF2 /* Common */,
-				A1DA77F11F72219200C26FF2 /* ChainGroupd */,
+				A1DA77F11F72219200C26FF2 /* ChainGroup */,
 				A1DA77EE1F72215900C26FF2 /* Bitconnect */,
 				A1DA77D71F721BC400C26FF2 /* AppDelegate.swift */,
 				A1DA77D91F721BC400C26FF2 /* ViewController.swift */,
@@ -148,13 +148,13 @@
 			path = Bitconnect;
 			sourceTree = "<group>";
 		};
-		A1DA77F11F72219200C26FF2 /* ChainGroupd */ = {
+		A1DA77F11F72219200C26FF2 /* ChainGroup */ = {
 			isa = PBXGroup;
 			children = (
 				A14DCC691F726F8100190639 /* ChainGroupInvestment.swift */,
 				A14DCC711F7273F600190639 /* ChainGroupInvestmentBuilder.swift */,
 			);
-			path = ChainGroupd;
+			path = ChainGroup;
 			sourceTree = "<group>";
 		};
 		A1DA77F81F72266600C26FF2 /* Common */ = {

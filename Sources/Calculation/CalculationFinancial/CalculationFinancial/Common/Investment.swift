@@ -12,8 +12,10 @@ protocol Investment: Initializable {
     
     var startMoneyInvest: Double { get }
     var profitRate: Double { get }
+	var totalStepPackage: Int { get }
     var totalStep: Int { get }
     var refundCapitalBack: Bool { get }
+	var invitationRate: Double { get }
     
     var minMoneyReinvest: Double { get }
     var stepMoneyReinvest: Double? { get }      // set to nil if platform don't require step money reinvest
@@ -50,9 +52,9 @@ extension Investment {
         return (moneyInvest, remain)
     }
     
-    func moneyInfo(after step: Int) -> (packageInvests: [Model.Package], remain: Double) {
+	func moneyInfo(after step: Int) -> (packageInvests: [Model.Package], remain: Double, invitationEarned: Double) {
         if step == 0 {
-            return ([Model.Package(money: startMoneyInvest)], 0)
+			return ([Model.Package(money: startMoneyInvest, totalStep: totalStepPackage)], 0, startMoneyInvest * invitationRate)
         }
         
         let moneyPreviousDay = moneyInfo(after: step - 1)
@@ -64,7 +66,7 @@ extension Investment {
             profit += profitPerStep(money: package.moneyInvest)
             package.currentStep += 1
             
-            if package.currentStep < totalStep {
+            if package.currentStep < package.totalStep {
                 newPackageInvests.append(package)
             } else {
                 if refundCapitalBack {
@@ -76,19 +78,30 @@ extension Investment {
         profit += moneyPreviousDay.remain
         
         let moneyNextInvest = devideMoneyReInvest(money: profit)
-        
+
+		var newInvitationEarned = moneyPreviousDay.invitationEarned
         if moneyNextInvest.nextInvestMoney > 0 {
-            newPackageInvests.append(Model.Package(money: moneyNextInvest.nextInvestMoney))
+			newPackageInvests.append(Model.Package(money: moneyNextInvest.nextInvestMoney, totalStep: totalStepPackage))
+			newInvitationEarned += moneyNextInvest.nextInvestMoney * invitationRate
         }
         
-        return (newPackageInvests, moneyNextInvest.remain)
+        return (newPackageInvests, moneyNextInvest.remain, newInvitationEarned)
     }
     
     func moneyEarned(reinvestIn step: Int) -> Double {
         let money = moneyInfo(after: step)
-        let remainDay = totalStep - step
-        
-        
-        return newMoney * Double(remainDay) * profitRate(for: newMoney)
+        let remainStep = totalStep - step
+
+		var total: Double = 0
+
+		for package in money.packageInvests {
+			let numberOfSteps = min(remainStep, package.totalStep - package.currentStep)
+			total += profitPerStep(money: package.moneyInvest) * Double(numberOfSteps)
+		}
+
+		total += money.remain
+		total += money.invitationEarned
+
+		return total
     }
 }

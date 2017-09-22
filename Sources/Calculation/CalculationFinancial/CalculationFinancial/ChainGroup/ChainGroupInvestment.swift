@@ -12,7 +12,9 @@ class ChainGroupInvestment: Investment {
 
     var startMoneyInvest: Double = 0
     var profitRate: Double = 0
+	var totalStepPackage: Int = 0
     var totalStep: Int = 0
+	var invitationRate: Double = 0
     
     let refundCapitalBack: Bool = Constant.ChainGroup.refundCapitalBack
     let minMoneyReinvest: Double = Constant.ChainGroup.minMoneyReinvest

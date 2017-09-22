@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     fileprivate func drawChainGroupDailyChart() {
         let builder = ChainGroupInvestmentBuilder()
-        builder.makeDailyInvestment(money: 200)
+        builder.makeDailyInvestment(money: Constant.ChainGroup.Daily.startInvestedMoney, numberOfDay: Constant.ChainGroup.Daily.totalDay)
         let investment = builder.outputObject()
         
         var maxMoney = Double(0)
@@ -45,13 +45,14 @@ class ViewController: UIViewController {
                 totalDayReInvest = i
             }
         }
-        
-        print("Start Money: \(investment.startMoneyInvest)\nNumber of Day reinvest: \(totalDayReInvest)\nMax money return: \(maxMoney)")
+
+		let message = "Start Money: \(investment.startMoneyInvest)\nNumber of Day reinvest: \(totalDayReInvest)\nMax money return: \(maxMoney)"
+        print(message)
         
         let dataSet = BarChartDataSet(values: values, label: "Chain Group Investment")
         let data = BarChartData(dataSets: [dataSet])
         barChart.data = data
-        barChart.chartDescription?.text = "Chain Group Investment by David"
+        barChart.chartDescription?.text = message
         
         //All other additions to this function will go here
         
