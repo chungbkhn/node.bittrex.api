@@ -82,9 +82,9 @@ class BitConnect {
     
     func moneyEarned(numberOfDay: Int) -> (reinvest: Double, gain: Double) {
         let moneyInfo = moneyReinvestAt(numberOfDay: numberOfDay)
-        var moneyReinvest = moneyInfo.packageLending.reduce(0, +) + moneyInfo.remain
+        let moneyReinvest = moneyInfo.packageLending.reduce(0, +) + moneyInfo.remain
         
-        var moneyGain = moneyGainProfit(numberOfDay: numberOfDay)
+        let moneyGain = moneyGainProfit(numberOfDay: numberOfDay)
         
         return (moneyReinvest, moneyGain)
     }

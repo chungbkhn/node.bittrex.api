@@ -25,33 +25,34 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        drawChainGroupChart()
+        drawChainGroupDailyChart()
     }
     
-    fileprivate func drawChainGroupChart() {
-        let chainGroup = ChainGroup()
-        chainGroup.moneyInvested = 200
-        print("Start calculate for chain group")
+    fileprivate func drawChainGroupDailyChart() {
+        let builder = ChainGroupInvestmentBuilder()
+        builder.makeDailyInvestment(money: Constant.ChainGroup.Daily.startInvestedMoney, numberOfDay: Constant.ChainGroup.Daily.totalDay)
+        let investment = builder.outputObject()
         
         var maxMoney = Double(0)
         var totalDayReInvest = 1
         var values = [BarChartDataEntry]()
         
-        for i in 1 ... (chainGroup.totalDay - 1) {
-            let money = chainGroup.getMoneyForDay(dayInvest: i)
+        for i in 1 ... (investment.totalStep - 1) {
+            let money = investment.moneyEarned(reinvestIn: i)
             values.append(BarChartDataEntry(x: Double(i), y: money))
             if money > maxMoney {
                 maxMoney = money
                 totalDayReInvest = i
             }
         }
-        
-        print("Start Money: \(chainGroup.moneyInvested)\nNumber of Day reinvest: \(totalDayReInvest)\nMax money return: \(maxMoney)")
+
+		let message = "Start Money: \(investment.startMoneyInvest)\nNumber of Day reinvest: \(totalDayReInvest)\nMax money return: \(maxMoney)"
+        print(message)
         
         let dataSet = BarChartDataSet(values: values, label: "Chain Group Investment")
         let data = BarChartData(dataSets: [dataSet])
         barChart.data = data
-        barChart.chartDescription?.text = "Chain Group Investment by David"
+        barChart.chartDescription?.text = message
         
         //All other additions to this function will go here
         

@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14DCC5B1F72596600190639 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC5A1F72596600190639 /* Model.swift */; };
+		A14DCC621F725EEE00190639 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC611F725EEE00190639 /* Constant.swift */; };
+		A14DCC641F725F1400190639 /* Constant+ChainGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC631F725F1400190639 /* Constant+ChainGroup.swift */; };
+		A14DCC6A1F726F8100190639 /* ChainGroupInvestment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC691F726F8100190639 /* ChainGroupInvestment.swift */; };
+		A14DCC6C1F7271F200190639 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC6B1F7271F200190639 /* Package.swift */; };
+		A14DCC6E1F72722300190639 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC6D1F72722300190639 /* Builder.swift */; };
+		A14DCC701F72725C00190639 /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC6F1F72725C00190639 /* Investment.swift */; };
+		A14DCC721F7273F600190639 /* ChainGroupInvestmentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC711F7273F600190639 /* ChainGroupInvestmentBuilder.swift */; };
+		A14DCC741F72822D00190639 /* BitconnectInvestment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC731F72822D00190639 /* BitconnectInvestment.swift */; };
+		A14DCC761F72824D00190639 /* Constant+Bitconnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DCC751F72824D00190639 /* Constant+Bitconnect.swift */; };
 		A1DA77D81F721BC400C26FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA77D71F721BC400C26FF2 /* AppDelegate.swift */; };
 		A1DA77DA1F721BC400C26FF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA77D91F721BC400C26FF2 /* ViewController.swift */; };
 		A1DA77DD1F721BC400C26FF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DA77DB1F721BC400C26FF2 /* Main.storyboard */; };
 		A1DA77DF1F721BC400C26FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DA77DE1F721BC400C26FF2 /* Assets.xcassets */; };
 		A1DA77E21F721BC400C26FF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DA77E01F721BC400C26FF2 /* LaunchScreen.storyboard */; };
 		A1DA77F01F72216200C26FF2 /* Bitconnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA77EF1F72216200C26FF2 /* Bitconnect.swift */; };
-		A1DA77F31F72219200C26FF2 /* ChainGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA77F21F72219200C26FF2 /* ChainGroup.swift */; };
 		A1DA77F51F7221A000C26FF2 /* BitconnectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA77F41F7221A000C26FF2 /* BitconnectInfo.swift */; };
-		A1DA77F71F7221AF00C26FF2 /* ChainGroupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA77F61F7221AF00C26FF2 /* ChainGroupInfo.swift */; };
 		A1DA77FA1F72266E00C26FF2 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA77F91F72266E00C26FF2 /* Util.swift */; };
 		A1DA77FC1F72267900C26FF2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA77FB1F72267900C26FF2 /* Common.swift */; };
 		E7174967E3D2B88EE3D0CAF6 /* Pods_CalculationFinancial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E1AB52B0711D47E20B936D /* Pods_CalculationFinancial.framework */; };
@@ -24,6 +32,16 @@
 /* Begin PBXFileReference section */
 		338F2250A8384AF6F35C911D /* Pods-CalculationFinancial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculationFinancial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial.debug.xcconfig"; sourceTree = "<group>"; };
 		3BB92A4CA3087101EA7D65B1 /* Pods-CalculationFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculationFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial.release.xcconfig"; sourceTree = "<group>"; };
+		A14DCC5A1F72596600190639 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A14DCC611F725EEE00190639 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A14DCC631F725F1400190639 /* Constant+ChainGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constant+ChainGroup.swift"; sourceTree = "<group>"; };
+		A14DCC691F726F8100190639 /* ChainGroupInvestment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainGroupInvestment.swift; sourceTree = "<group>"; };
+		A14DCC6B1F7271F200190639 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A14DCC6D1F72722300190639 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		A14DCC6F1F72725C00190639 /* Investment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Investment.swift; sourceTree = "<group>"; };
+		A14DCC711F7273F600190639 /* ChainGroupInvestmentBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainGroupInvestmentBuilder.swift; sourceTree = "<group>"; };
+		A14DCC731F72822D00190639 /* BitconnectInvestment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitconnectInvestment.swift; sourceTree = "<group>"; };
+		A14DCC751F72824D00190639 /* Constant+Bitconnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constant+Bitconnect.swift"; sourceTree = "<group>"; };
 		A1DA77D41F721BC400C26FF2 /* CalculationFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculationFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DA77D71F721BC400C26FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1DA77D91F721BC400C26FF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,9 +50,7 @@
 		A1DA77E11F721BC400C26FF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1DA77E31F721BC400C26FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1DA77EF1F72216200C26FF2 /* Bitconnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bitconnect.swift; sourceTree = "<group>"; };
-		A1DA77F21F72219200C26FF2 /* ChainGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainGroup.swift; sourceTree = "<group>"; };
 		A1DA77F41F7221A000C26FF2 /* BitconnectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitconnectInfo.swift; sourceTree = "<group>"; };
-		A1DA77F61F7221AF00C26FF2 /* ChainGroupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainGroupInfo.swift; sourceTree = "<group>"; };
 		A1DA77F91F72266E00C26FF2 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A1DA77FB1F72267900C26FF2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B6E1AB52B0711D47E20B936D /* Pods_CalculationFinancial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculationFinancial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +85,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A14DCC591F72595E00190639 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A14DCC5A1F72596600190639 /* Model.swift */,
+				A14DCC6B1F7271F200190639 /* Package.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A14DCC601F725EDF00190639 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A14DCC611F725EEE00190639 /* Constant.swift */,
+				A14DCC631F725F1400190639 /* Constant+ChainGroup.swift */,
+				A14DCC751F72824D00190639 /* Constant+Bitconnect.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		A1DA77CB1F721BC400C26FF2 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A1DA77F81F72266600C26FF2 /* Common */,
-				A1DA77F11F72219200C26FF2 /* ChainGroupd */,
+				A1DA77F11F72219200C26FF2 /* ChainGroup */,
 				A1DA77EE1F72215900C26FF2 /* Bitconnect */,
 				A1DA77D71F721BC400C26FF2 /* AppDelegate.swift */,
 				A1DA77D91F721BC400C26FF2 /* ViewController.swift */,
@@ -108,24 +143,29 @@
 			children = (
 				A1DA77EF1F72216200C26FF2 /* Bitconnect.swift */,
 				A1DA77F41F7221A000C26FF2 /* BitconnectInfo.swift */,
+				A14DCC731F72822D00190639 /* BitconnectInvestment.swift */,
 			);
 			path = Bitconnect;
 			sourceTree = "<group>";
 		};
-		A1DA77F11F72219200C26FF2 /* ChainGroupd */ = {
+		A1DA77F11F72219200C26FF2 /* ChainGroup */ = {
 			isa = PBXGroup;
 			children = (
-				A1DA77F21F72219200C26FF2 /* ChainGroup.swift */,
-				A1DA77F61F7221AF00C26FF2 /* ChainGroupInfo.swift */,
+				A14DCC691F726F8100190639 /* ChainGroupInvestment.swift */,
+				A14DCC711F7273F600190639 /* ChainGroupInvestmentBuilder.swift */,
 			);
-			path = ChainGroupd;
+			path = ChainGroup;
 			sourceTree = "<group>";
 		};
 		A1DA77F81F72266600C26FF2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A14DCC601F725EDF00190639 /* Constant */,
+				A14DCC591F72595E00190639 /* Model */,
 				A1DA77F91F72266E00C26FF2 /* Util.swift */,
 				A1DA77FB1F72267900C26FF2 /* Common.swift */,
+				A14DCC6D1F72722300190639 /* Builder.swift */,
+				A14DCC6F1F72725C00190639 /* Investment.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -259,14 +299,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14DCC741F72822D00190639 /* BitconnectInvestment.swift in Sources */,
+				A14DCC721F7273F600190639 /* ChainGroupInvestmentBuilder.swift in Sources */,
+				A14DCC761F72824D00190639 /* Constant+Bitconnect.swift in Sources */,
+				A14DCC5B1F72596600190639 /* Model.swift in Sources */,
+				A14DCC641F725F1400190639 /* Constant+ChainGroup.swift in Sources */,
 				A1DA77FC1F72267900C26FF2 /* Common.swift in Sources */,
-				A1DA77F31F72219200C26FF2 /* ChainGroup.swift in Sources */,
-				A1DA77F71F7221AF00C26FF2 /* ChainGroupInfo.swift in Sources */,
 				A1DA77F01F72216200C26FF2 /* Bitconnect.swift in Sources */,
+				A14DCC6A1F726F8100190639 /* ChainGroupInvestment.swift in Sources */,
+				A14DCC701F72725C00190639 /* Investment.swift in Sources */,
 				A1DA77DA1F721BC400C26FF2 /* ViewController.swift in Sources */,
 				A1DA77FA1F72266E00C26FF2 /* Util.swift in Sources */,
+				A14DCC6C1F7271F200190639 /* Package.swift in Sources */,
 				A1DA77F51F7221A000C26FF2 /* BitconnectInfo.swift in Sources */,
 				A1DA77D81F721BC400C26FF2 /* AppDelegate.swift in Sources */,
+				A14DCC621F725EEE00190639 /* Constant.swift in Sources */,
+				A14DCC6E1F72722300190639 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -377,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -395,7 +443,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.25ths.CalculationFinancial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -409,7 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.25ths.CalculationFinancial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
