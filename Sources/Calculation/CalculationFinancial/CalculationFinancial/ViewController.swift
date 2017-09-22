@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     }
     
     fileprivate func drawChainGroupDailyChart() {
-        let builder = ChainGroupInvestmentBuilder()
-        builder.makeDailyInvestment(money: Constant.ChainGroup.Daily.startInvestedMoney, numberOfDay: Constant.ChainGroup.Daily.totalDay)
+        let builder = BitconnectInvestmentBuilder()
+        builder.makeInvestment(money: 1190, numberOfDays: 365)
         let investment = builder.outputObject()
         
         var maxMoney = Double(0)

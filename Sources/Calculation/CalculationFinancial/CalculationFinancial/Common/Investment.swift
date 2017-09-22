@@ -10,34 +10,16 @@ import Foundation
 
 protocol Investment: Initializable {
 
-	associatedtype T: Model.Package
+	associatedtype T: BasePackage
     
     var startMoneyInvest: Double { get }
-    var profitRate: Double { get }
-	var totalStepPackage: Int { get }
     var totalStep: Int { get }
-    var refundCapitalBack: Bool { get }
-	var invitationRate: Double { get }
     
     var minMoneyReinvest: Double { get }
     var stepMoneyReinvest: Double? { get }      // set to nil if platform don't require step money reinvest
-    
-    func profitRate(for money: Double) -> Double
 }
 
 extension Investment {
-    
-    func profitRate(for money: Double) -> Double {
-        return profitRate
-    }
-    
-    private func roundMoneyProfit(profit: Double) -> Double {
-        return Double(round(profit * 100) / 100)
-    }
-    
-    private func profitPerStep(money: Double) -> Double {
-        return roundMoneyProfit(profit: profitRate(for: money) * money)
-    }
     
     private func devideMoneyReInvest(money: Double) -> (nextInvestMoney: Double, remain: Double) {
         var moneyInvest = Double(0)
@@ -54,24 +36,26 @@ extension Investment {
         return (moneyInvest, remain)
     }
     
-	func moneyInfo(after step: Int) -> (packageInvests: [Model.Package], remain: Double, invitationEarned: Double) {
+	func moneyInfo(after step: Int) -> (packageInvests: [T], remain: Double, invitationEarned: Double) {
         if step == 0 {
-			return ([Model.Package(money: startMoneyInvest, totalStep: totalStepPackage)], 0, startMoneyInvest * invitationRate)
+			let newInvest = T(money: startMoneyInvest)
+			return ([newInvest], 0, newInvest.invitationMoney)
         }
         
         let moneyPreviousDay = moneyInfo(after: step - 1)
         
         var profit = Double(0)
         
-        var newPackageInvests: [Model.Package] = []
+        var newPackageInvests: [T] = []
         for package in moneyPreviousDay.packageInvests {
-            profit += profitPerStep(money: package.moneyInvest)
+//			print("Money: \(package.moneyInvest)  profitRate: \(package.profitRate)  ProfitMoney: \(package.profitMoneyPerStep)")
+            profit += package.profitMoneyPerStep
             package.currentStep += 1
             
             if package.currentStep < package.totalStep {
                 newPackageInvests.append(package)
             } else {
-                if refundCapitalBack {
+                if package.refundCapitalBack {
                     profit += package.moneyInvest
                 }
             }
@@ -83,8 +67,9 @@ extension Investment {
 
 		var newInvitationEarned = moneyPreviousDay.invitationEarned
         if moneyNextInvest.nextInvestMoney > 0 {
-			newPackageInvests.append(Model.Package(money: moneyNextInvest.nextInvestMoney, totalStep: totalStepPackage))
-			newInvitationEarned += moneyNextInvest.nextInvestMoney * invitationRate
+			let newInvestment = T(money: moneyNextInvest.nextInvestMoney)
+			newPackageInvests.append(newInvestment)
+			newInvitationEarned += newInvestment.invitationMoney
         }
         
         return (newPackageInvests, moneyNextInvest.remain, newInvitationEarned)
@@ -98,7 +83,7 @@ extension Investment {
 
 		for package in money.packageInvests {
 			let numberOfSteps = min(remainStep, package.totalStep - package.currentStep)
-			total += profitPerStep(money: package.moneyInvest) * Double(numberOfSteps)
+			total += package.profitMoneyPerStep * Double(numberOfSteps)
 		}
 
 		total += money.remain

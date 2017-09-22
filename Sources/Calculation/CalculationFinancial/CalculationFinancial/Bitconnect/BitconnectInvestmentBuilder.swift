@@ -11,6 +11,7 @@ import UIKit
 class BitconnectInvestmentBuilder: Builder<BitconnectInvestment> {
 
 	func makeInvestment(money: Double, numberOfDays: Int) {
-		
+		object.startMoneyInvest = money
+		object.totalStep = numberOfDays
 	}
 }
