@@ -6,4 +6,8 @@ tests/config.json
 
 \.idea/
 
-Sources/Calculation/CalculationFinancial/CalculationFinancial\.xcworkspace/xcuserdata/cduongvan\.xcuserdatad/
+Sources/Calculation/CalculationFinancial/CalculationFinancial\.xcworkspace/xcuserdata/
+
+Sources/Calculation/CalculationFinancial/CalculationFinancial\.xcodeproj/xcuserdata/
+
+Sources/Calculation/CalculationFinancial/Pods/
