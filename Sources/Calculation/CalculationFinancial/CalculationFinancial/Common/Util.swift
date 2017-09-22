@@ -8,6 +8,9 @@
 
 import UIKit
 
-class Util: NSObject {
+struct Util {
 
+	static func roundMoneyProfit(money: Double) -> Double {
+		return Double(round(money * 100) / 100)
+	}
 }

@@ -9,13 +9,12 @@
 import UIKit
 
 class BitconnectInvestment: Investment {
+
+	typealias T = Model.Bitconnect.Package
+
     var startMoneyInvest: Double = 0
-    var profitRate: Double = 0
     var totalStep: Int = 0
-	var totalStepPackage: Int = 0
-	var invitationRate: Double = 0
-    
-    let refundCapitalBack: Bool = Constant.Bitconnect.refundCapitalBack
+
     let minMoneyReinvest: Double = Constant.Bitconnect.minMoneyReinvest
     let stepMoneyReinvest: Double? = Constant.Bitconnect.stepMoneyReinvest
     
