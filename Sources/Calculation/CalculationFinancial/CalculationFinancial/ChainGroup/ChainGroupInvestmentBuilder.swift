@@ -15,7 +15,6 @@ class ChainGroupInvestmentBuilder: Builder<ChainGroupInvestment> {
         object.totalStep = numberOfDay
 		object.totalStepPackage = Constant.ChainGroup.Daily.totalDayPackage
         object.profitRate = Constant.ChainGroup.Daily.profitRate
-		object.invitationRate = Constant.ChainGroup.invitationRate
     }
     
 	func makeMonthlyInvestment(money: Double, numberOfMonth: Int) {
@@ -23,6 +22,5 @@ class ChainGroupInvestmentBuilder: Builder<ChainGroupInvestment> {
         object.totalStep = numberOfMonth
 		object.totalStepPackage = Constant.ChainGroup.Monthly.totalDayPackage
         object.profitRate = Constant.ChainGroup.Monthly.profitRate
-		object.invitationRate = Constant.ChainGroup.invitationRate
     }
 }

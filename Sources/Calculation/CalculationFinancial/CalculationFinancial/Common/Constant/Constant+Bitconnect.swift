@@ -15,5 +15,6 @@ extension Constant {
         static let minMoneyReinvest = 10.0
         static let refundCapitalBack = true
         static let stepMoneyReinvest: Double? = 10
+		static let baseProfitRate = 0.0093
     }
 }

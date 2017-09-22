@@ -9,6 +9,8 @@
 import Foundation
 
 protocol Investment: Initializable {
+
+	associatedtype T: Model.Package
     
     var startMoneyInvest: Double { get }
     var profitRate: Double { get }
