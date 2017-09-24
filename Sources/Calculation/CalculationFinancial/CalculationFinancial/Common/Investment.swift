@@ -75,7 +75,7 @@ extension Investment {
         return (newPackageInvests, moneyNextInvest.remain, newInvitationEarned)
     }
 
-    func moneyEarned(reinvestIn step: Int) -> Double {
+	func moneyEarned(reinvestIn step: Int) -> (total: Double, invitation: Double) {
         let money = moneyInfo(after: step)
         let remainStep = totalStep - step
 
@@ -92,6 +92,6 @@ extension Investment {
 		total += money.remain
 		total += money.invitationEarned
 
-		return total
+		return (total, money.invitationEarned)
     }
 }

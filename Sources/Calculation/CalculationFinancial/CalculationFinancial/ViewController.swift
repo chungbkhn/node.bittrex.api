@@ -22,28 +22,42 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        drawChainGroupDailyChart()
+        drawChainGroupChart()
     }
 
-    fileprivate func drawChainGroupDailyChart() {
-        let builder = BitconnectInvestmentBuilder()
-        builder.makeInvestment(money: 1190, numberOfDays: 365)
-        let investment = builder.outputObject()
+	fileprivate func drawChainGroupChart() {
+		let builder = ChainGroupInvestmentBuilder()
+		builder.makeInvestment(money: 500, numberOfDays: 180)
+		let investment = builder.outputObject()
 
+		drawChart(investment: investment)
+	}
+
+	fileprivate func drawBitconnectChart() {
+		let builder = BitconnectInvestmentBuilder()
+		builder.makeInvestment(money: 1190, numberOfDays: 365)
+		let investment = builder.outputObject()
+
+		drawChart(investment: investment)
+	}
+
+	fileprivate func drawChart<T: Investment>(investment: T) {
         var maxMoney = Double(0)
         var totalDayReInvest = 1
+		var invitationEarned: Double = 0
         var values = [BarChartDataEntry]()
 
         for i in 1 ... (investment.totalStep - 1) {
             let money = investment.moneyEarned(reinvestIn: i)
-            values.append(BarChartDataEntry(x: Double(i), y: money))
-            if money > maxMoney {
-                maxMoney = money
+            values.append(BarChartDataEntry(x: Double(i), y: money.total))
+            if money.total > maxMoney {
+                maxMoney = money.total
                 totalDayReInvest = i
+				invitationEarned = money.invitation
             }
         }
 
-		let message = "Start Money: \(investment.startMoneyInvest)\nNumber of Day reinvest: \(totalDayReInvest)\nMax money return: \(maxMoney)"
+		let message = "Start Money: \(investment.startMoneyInvest)\nNumber of Day reinvest: \(totalDayReInvest)\nMax money return: \(maxMoney)\nMoney invitation earned: \(invitationEarned)"
         print(message)
 
         let dataSet = BarChartDataSet(values: values, label: "Chain Group Investment")
