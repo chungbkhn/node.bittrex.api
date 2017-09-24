@@ -8,21 +8,6 @@
 
 import Foundation
 
-extension Model {
-
-	class Package {
-
-		var moneyInvest: Double
-		var currentStep: Int = 0
-		var totalStep: Int = 0
-
-		init(money: Double, totalStep: Int) {
-			moneyInvest = money
-			self.totalStep = totalStep
-		}
-	}
-}
-
 protocol BasePackage: class {
 
 	var moneyInvest: Double { get set }

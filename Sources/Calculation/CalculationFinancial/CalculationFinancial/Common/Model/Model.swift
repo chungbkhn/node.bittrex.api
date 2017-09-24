@@ -9,6 +9,6 @@
 import Foundation
 
 struct Model {
-    
+
     private init() {}
 }

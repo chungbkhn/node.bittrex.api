@@ -11,47 +11,47 @@ import Foundation
 protocol Investment: Initializable {
 
 	associatedtype T: BasePackage
-    
+
     var startMoneyInvest: Double { get }
     var totalStep: Int { get }
-    
+
     var minMoneyReinvest: Double { get }
     var stepMoneyReinvest: Double? { get }      // set to nil if platform don't require step money reinvest
 }
 
 extension Investment {
-    
+
     private func devideMoneyReInvest(money: Double) -> (nextInvestMoney: Double, remain: Double) {
         var moneyInvest = Double(0)
         if let `stepMoneyReinvest` = stepMoneyReinvest {
             let stepInvest = Double(Int(money / stepMoneyReinvest))
-            
+
             moneyInvest = stepInvest * stepMoneyReinvest
         } else {
             moneyInvest = money
         }
-        
+
         if moneyInvest < minMoneyReinvest { moneyInvest = 0 }
         let remain = money - moneyInvest
         return (moneyInvest, remain)
     }
-    
+
 	func moneyInfo(after step: Int) -> (packageInvests: [T], remain: Double, invitationEarned: Double) {
         if step == 0 {
 			let newInvest = T(money: startMoneyInvest)
 			return ([newInvest], 0, newInvest.invitationMoney)
         }
-        
+
         let moneyPreviousDay = moneyInfo(after: step - 1)
-        
+
         var profit = Double(0)
-        
+
         var newPackageInvests: [T] = []
         for package in moneyPreviousDay.packageInvests {
 //			print("Money: \(package.moneyInvest)  profitRate: \(package.profitRate)  ProfitMoney: \(package.profitMoneyPerStep)")
             profit += package.profitMoneyPerStep
             package.currentStep += 1
-            
+
             if package.currentStep < package.totalStep {
                 newPackageInvests.append(package)
             } else {
@@ -60,9 +60,9 @@ extension Investment {
                 }
             }
         }
-        
+
         profit += moneyPreviousDay.remain
-        
+
         let moneyNextInvest = devideMoneyReInvest(money: profit)
 
 		var newInvitationEarned = moneyPreviousDay.invitationEarned
@@ -71,10 +71,10 @@ extension Investment {
 			newPackageInvests.append(newInvestment)
 			newInvitationEarned += newInvestment.invitationMoney
         }
-        
+
         return (newPackageInvests, moneyNextInvest.remain, newInvitationEarned)
     }
-    
+
     func moneyEarned(reinvestIn step: Int) -> Double {
         let money = moneyInfo(after: step)
         let remainStep = totalStep - step
@@ -84,6 +84,9 @@ extension Investment {
 		for package in money.packageInvests {
 			let numberOfSteps = min(remainStep, package.totalStep - package.currentStep)
 			total += package.profitMoneyPerStep * Double(numberOfSteps)
+			if package.refundCapitalBack {
+				total += package.moneyInvest
+			}
 		}
 
 		total += money.remain

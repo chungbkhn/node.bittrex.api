@@ -10,13 +10,13 @@ import UIKit
 
 class ChainGroupInvestment: Investment {
 
-	typealias T = Model.ChainGroup.DailyPackage
+	typealias T = Model.ChainGroup.Package
 
     var startMoneyInvest: Double = 0
     var totalStep: Int = 0
 
     let minMoneyReinvest: Double = Constant.ChainGroup.minMoneyReinvest
     let stepMoneyReinvest: Double? = Constant.ChainGroup.stepMoneyReinvest
-    
+
     required init() {}
 }

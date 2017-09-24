@@ -11,24 +11,14 @@ import Foundation
 extension Constant {
 
     struct ChainGroup {
-        
+
 		static let minMoneyReinvest: Double = 10.0
         static let refundCapitalBack = false
         static let stepMoneyReinvest: Double? = nil
 		static let invitationRate: Double = 0.05	// 5%
-        
-        struct Daily {
-            static let profitRate: Double = 0.028  // 2.8%/day
-            static let totalDay: Int = 180
-			static let totalDayPackage: Int = 180
-			static let startInvestedMoney: Double = 500
-        }
-        
-        struct Monthly {
-			static let profitRate: Double = 0.85  // 2.8%/day
-			static let totalMonth: Int = 6
-			static let totalDayPackage: Int = 6
-			static let startInvestedMoney: Double = 200
-        }
+		static let profitRate: Double = 0.028  // 2.8%/day
+		static let totalDay: Int = 180
+		static let totalDayPackage: Int = 180
+		static let startInvestedMoney: Double = 500
     }
 }

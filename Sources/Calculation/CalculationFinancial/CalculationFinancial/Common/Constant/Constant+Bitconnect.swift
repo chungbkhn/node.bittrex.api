@@ -9,9 +9,9 @@
 import UIKit
 
 extension Constant {
-    
+
     struct Bitconnect {
-        
+
 		static let minMoneyReinvest: Double = 10.0
         static let refundCapitalBack = true
         static let stepMoneyReinvest: Double? = 10

@@ -13,9 +13,9 @@ protocol Initializable: class {
 }
 
 class Builder<T: Initializable> {
-    
+
     let object = T()
-    
+
     func outputObject() -> T {
         return object
     }

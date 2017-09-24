@@ -17,6 +17,6 @@ class BitconnectInvestment: Investment {
 
     let minMoneyReinvest: Double = Constant.Bitconnect.minMoneyReinvest
     let stepMoneyReinvest: Double? = Constant.Bitconnect.stepMoneyReinvest
-    
+
     required init() {}
 }
