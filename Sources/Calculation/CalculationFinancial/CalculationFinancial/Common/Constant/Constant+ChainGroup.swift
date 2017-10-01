@@ -16,7 +16,7 @@ extension Constant {
         static let refundCapitalBack = false
         static let stepMoneyReinvest: Double? = nil
 		static let invitationRate: Double = 0.05	// 5%
-		static let profitRate: Double = 0.028  // 2.8%/day
+		static let profitRate: Double = 0.023  // 2.8%/day
 		static let totalDay: Int = 180
 		static let totalDayPackage: Int = 180
 		static let startInvestedMoney: Double = 500
