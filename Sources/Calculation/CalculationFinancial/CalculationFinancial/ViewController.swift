@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
 	fileprivate func drawChainGroupChart() {
 		let builder = ChainGroupInvestmentBuilder()
-		builder.makeInvestment(money: 500, numberOfDays: 180)
+		builder.makeInvestment(money: 560, numberOfDays: 180)
 		let investment = builder.outputObject()
 
 		drawChart(investment: investment)
@@ -57,7 +57,14 @@ class ViewController: UIViewController {
             }
         }
 
-		let message = "Start Money: \(investment.startMoneyInvest)\nNumber of Day reinvest: \(totalDayReInvest)\nMax money return: \(maxMoney)\nMoney invitation earned: \(invitationEarned)"
+		let dateFormat = DateFormatter()
+		dateFormat.dateFormat = "dd/MM/yyyy"
+		dateFormat.timeZone = TimeZone(secondsFromGMT: 7)
+		let startDate = dateFormat.date(from: "21/09/2017")!
+		print("Start Date: \(startDate)")
+
+		let endDayInvestment = Util.date(after: totalDayReInvest, referenceDate: startDate)
+		let message = "Start Money: \(investment.startMoneyInvest)\nNumber of Day reinvest: \(totalDayReInvest)\nMax money return: \(maxMoney)\nMoney invitation earned: \(invitationEarned)\nEnd Day Investment: \(endDayInvestment)"
         print(message)
 
         let dataSet = BarChartDataSet(values: values, label: "Chain Group Investment")
