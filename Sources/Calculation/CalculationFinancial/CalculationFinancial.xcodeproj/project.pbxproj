@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635C78A31F9CEAE5000437E6 /* RegalInvestment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78A21F9CEAE5000437E6 /* RegalInvestment.swift */; };
+		635C78A51F9CEB0E000437E6 /* RegalInvestmentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78A41F9CEB0E000437E6 /* RegalInvestmentBuilder.swift */; };
+		635C78A91F9CEB82000437E6 /* RegalPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78A81F9CEB82000437E6 /* RegalPackage.swift */; };
+		635C78AB1F9CEBA1000437E6 /* Constant+Regal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78AA1F9CEBA1000437E6 /* Constant+Regal.swift */; };
+		635C78AE1F9CECD5000437E6 /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78AD1F9CECD5000437E6 /* ChartHelper.swift */; };
+		635C78B01F9CED46000437E6 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78AF1F9CED46000437E6 /* ProductType.swift */; };
+		635C78B31F9CF8B5000437E6 /* HextraInvestment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78B21F9CF8B5000437E6 /* HextraInvestment.swift */; };
+		635C78B51F9CF8C5000437E6 /* HextraInvestmentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78B41F9CF8C5000437E6 /* HextraInvestmentBuilder.swift */; };
+		635C78B71F9CF8DF000437E6 /* HextraPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78B61F9CF8DF000437E6 /* HextraPackage.swift */; };
+		635C78B91F9CF902000437E6 /* Constant+Hextra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78B81F9CF902000437E6 /* Constant+Hextra.swift */; };
 		63B6AB771F75785500D03586 /* BitconnectInvestmentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B6AB761F75785500D03586 /* BitconnectInvestmentBuilder.swift */; };
 		63B6AB791F75830300D03586 /* ChainGroupPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B6AB781F75830300D03586 /* ChainGroupPackage.swift */; };
 		63B6AB7B1F75833000D03586 /* BitconnectPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B6AB7A1F75833000D03586 /* BitconnectPackage.swift */; };
@@ -35,6 +45,16 @@
 /* Begin PBXFileReference section */
 		338F2250A8384AF6F35C911D /* Pods-CalculationFinancial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculationFinancial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial.debug.xcconfig"; sourceTree = "<group>"; };
 		3BB92A4CA3087101EA7D65B1 /* Pods-CalculationFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculationFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial.release.xcconfig"; sourceTree = "<group>"; };
+		635C78A21F9CEAE5000437E6 /* RegalInvestment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegalInvestment.swift; sourceTree = "<group>"; };
+		635C78A41F9CEB0E000437E6 /* RegalInvestmentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegalInvestmentBuilder.swift; sourceTree = "<group>"; };
+		635C78A81F9CEB82000437E6 /* RegalPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegalPackage.swift; sourceTree = "<group>"; };
+		635C78AA1F9CEBA1000437E6 /* Constant+Regal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+Regal.swift"; sourceTree = "<group>"; };
+		635C78AD1F9CECD5000437E6 /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
+		635C78AF1F9CED46000437E6 /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
+		635C78B21F9CF8B5000437E6 /* HextraInvestment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HextraInvestment.swift; sourceTree = "<group>"; };
+		635C78B41F9CF8C5000437E6 /* HextraInvestmentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HextraInvestmentBuilder.swift; sourceTree = "<group>"; };
+		635C78B61F9CF8DF000437E6 /* HextraPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HextraPackage.swift; sourceTree = "<group>"; };
+		635C78B81F9CF902000437E6 /* Constant+Hextra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constant+Hextra.swift"; sourceTree = "<group>"; };
 		63B6AB761F75785500D03586 /* BitconnectInvestmentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitconnectInvestmentBuilder.swift; sourceTree = "<group>"; };
 		63B6AB781F75830300D03586 /* ChainGroupPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainGroupPackage.swift; sourceTree = "<group>"; };
 		63B6AB7A1F75833000D03586 /* BitconnectPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitconnectPackage.swift; sourceTree = "<group>"; };
@@ -82,6 +102,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		635C78A11F9CEAC3000437E6 /* Regal */ = {
+			isa = PBXGroup;
+			children = (
+				635C78A21F9CEAE5000437E6 /* RegalInvestment.swift */,
+				635C78A41F9CEB0E000437E6 /* RegalInvestmentBuilder.swift */,
+			);
+			path = Regal;
+			sourceTree = "<group>";
+		};
+		635C78AC1F9CEC8A000437E6 /* ChartHelper */ = {
+			isa = PBXGroup;
+			children = (
+				635C78AD1F9CECD5000437E6 /* ChartHelper.swift */,
+			);
+			path = ChartHelper;
+			sourceTree = "<group>";
+		};
+		635C78B11F9CF882000437E6 /* Hextra */ = {
+			isa = PBXGroup;
+			children = (
+				635C78B21F9CF8B5000437E6 /* HextraInvestment.swift */,
+				635C78B41F9CF8C5000437E6 /* HextraInvestmentBuilder.swift */,
+			);
+			path = Hextra;
+			sourceTree = "<group>";
+		};
 		6B498B7B2EF6A5B123EBF33E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +140,13 @@
 		A14DCC591F72595E00190639 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63B6AB7A1F75833000D03586 /* BitconnectPackage.swift */,
+				63B6AB781F75830300D03586 /* ChainGroupPackage.swift */,
+				635C78B61F9CF8DF000437E6 /* HextraPackage.swift */,
 				A14DCC5A1F72596600190639 /* Model.swift */,
 				A14DCC6B1F7271F200190639 /* Package.swift */,
-				63B6AB781F75830300D03586 /* ChainGroupPackage.swift */,
-				63B6AB7A1F75833000D03586 /* BitconnectPackage.swift */,
+				635C78AF1F9CED46000437E6 /* ProductType.swift */,
+				635C78A81F9CEB82000437E6 /* RegalPackage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,8 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				A14DCC611F725EEE00190639 /* Constant.swift */,
-				A14DCC631F725F1400190639 /* Constant+ChainGroup.swift */,
 				A14DCC751F72824D00190639 /* Constant+Bitconnect.swift */,
+				A14DCC631F725F1400190639 /* Constant+ChainGroup.swift */,
+				635C78B81F9CF902000437E6 /* Constant+Hextra.swift */,
+				635C78AA1F9CEBA1000437E6 /* Constant+Regal.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -133,6 +184,9 @@
 		A1DA77D61F721BC400C26FF2 /* CalculationFinancial */ = {
 			isa = PBXGroup;
 			children = (
+				635C78B11F9CF882000437E6 /* Hextra */,
+				635C78AC1F9CEC8A000437E6 /* ChartHelper */,
+				635C78A11F9CEAC3000437E6 /* Regal */,
 				A1DA77F81F72266600C26FF2 /* Common */,
 				A1DA77F11F72219200C26FF2 /* ChainGroup */,
 				A1DA77EE1F72215900C26FF2 /* Bitconnect */,
@@ -324,23 +378,33 @@
 			files = (
 				63B6AB771F75785500D03586 /* BitconnectInvestmentBuilder.swift in Sources */,
 				A14DCC741F72822D00190639 /* BitconnectInvestment.swift in Sources */,
+				635C78B31F9CF8B5000437E6 /* HextraInvestment.swift in Sources */,
 				63B6AB7B1F75833000D03586 /* BitconnectPackage.swift in Sources */,
+				635C78B51F9CF8C5000437E6 /* HextraInvestmentBuilder.swift in Sources */,
 				A14DCC721F7273F600190639 /* ChainGroupInvestmentBuilder.swift in Sources */,
 				63B6AB791F75830300D03586 /* ChainGroupPackage.swift in Sources */,
 				A14DCC761F72824D00190639 /* Constant+Bitconnect.swift in Sources */,
 				A14DCC5B1F72596600190639 /* Model.swift in Sources */,
+				635C78B01F9CED46000437E6 /* ProductType.swift in Sources */,
 				A14DCC641F725F1400190639 /* Constant+ChainGroup.swift in Sources */,
 				A1DA77FC1F72267900C26FF2 /* Common.swift in Sources */,
+				635C78A91F9CEB82000437E6 /* RegalPackage.swift in Sources */,
 				A1DA77F01F72216200C26FF2 /* Bitconnect.swift in Sources */,
 				A14DCC6A1F726F8100190639 /* ChainGroupInvestment.swift in Sources */,
 				A14DCC701F72725C00190639 /* Investment.swift in Sources */,
 				A1DA77DA1F721BC400C26FF2 /* ViewController.swift in Sources */,
+				635C78AE1F9CECD5000437E6 /* ChartHelper.swift in Sources */,
 				A1DA77FA1F72266E00C26FF2 /* Util.swift in Sources */,
 				A14DCC6C1F7271F200190639 /* Package.swift in Sources */,
 				A1DA77F51F7221A000C26FF2 /* BitconnectInfo.swift in Sources */,
+				635C78B91F9CF902000437E6 /* Constant+Hextra.swift in Sources */,
+				635C78A31F9CEAE5000437E6 /* RegalInvestment.swift in Sources */,
+				635C78B71F9CF8DF000437E6 /* HextraPackage.swift in Sources */,
 				A1DA77D81F721BC400C26FF2 /* AppDelegate.swift in Sources */,
 				A14DCC621F725EEE00190639 /* Constant.swift in Sources */,
+				635C78AB1F9CEBA1000437E6 /* Constant+Regal.swift in Sources */,
 				A14DCC6E1F72722300190639 /* Builder.swift in Sources */,
+				635C78A51F9CEB0E000437E6 /* RegalInvestmentBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

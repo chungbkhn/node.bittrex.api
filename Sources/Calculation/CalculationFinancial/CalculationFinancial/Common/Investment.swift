@@ -12,8 +12,8 @@ protocol Investment: Initializable {
 
 	associatedtype T: BasePackage
 
-    var startMoneyInvest: Double { get }
-    var totalStep: Int { get }
+    var startMoneyInvest: Double { get set }
+    var totalStep: Int { get set }
 
     var minMoneyReinvest: Double { get }
     var stepMoneyReinvest: Double? { get }      // set to nil if platform don't require step money reinvest

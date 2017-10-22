@@ -8,10 +8,4 @@
 
 import UIKit
 
-class ChainGroupInvestmentBuilder: Builder<ChainGroupInvestment> {
-
-	func makeInvestment(money: Double, numberOfDays: Int) {
-        object.startMoneyInvest = money
-        object.totalStep = numberOfDays
-    }
-}
+class ChainGroupInvestmentBuilder: Builder<ChainGroupInvestment> {}

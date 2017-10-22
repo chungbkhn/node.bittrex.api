@@ -12,11 +12,16 @@ protocol Initializable: class {
     init()
 }
 
-class Builder<T: Initializable> {
+class Builder<T: Investment> {
 
     let object = T()
 
     func outputObject() -> T {
         return object
     }
+
+	func makeInvestment(money: Double, numberOfDays: Int) {
+		object.startMoneyInvest = money
+		object.totalStep = numberOfDays
+	}
 }
