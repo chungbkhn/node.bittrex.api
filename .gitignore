@@ -11,3 +11,5 @@ Sources/Calculation/CalculationFinancial/CalculationFinancial\.xcworkspace/xcuse
 Sources/Calculation/CalculationFinancial/CalculationFinancial\.xcodeproj/xcuserdata/
 
 Sources/Calculation/CalculationFinancial/Pods/
+
+*.xcbkptlist
