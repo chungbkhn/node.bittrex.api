@@ -79,6 +79,7 @@
 		A1DA77F41F7221A000C26FF2 /* BitconnectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitconnectInfo.swift; sourceTree = "<group>"; };
 		A1DA77F91F72266E00C26FF2 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A1DA77FB1F72267900C26FF2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		A1F8D4041FBEEB2B007B6511 /* Golix.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Golix.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B6E1AB52B0711D47E20B936D /* Pods_CalculationFinancial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculationFinancial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,6 +185,7 @@
 		A1DA77D61F721BC400C26FF2 /* CalculationFinancial */ = {
 			isa = PBXGroup;
 			children = (
+				A1F8D4031FBEEA21007B6511 /* Golix */,
 				635C78B11F9CF882000437E6 /* Hextra */,
 				635C78AC1F9CEC8A000437E6 /* ChartHelper */,
 				635C78A11F9CEAC3000437E6 /* Regal */,
@@ -231,6 +233,14 @@
 				A14DCC6F1F72725C00190639 /* Investment.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		A1F8D4031FBEEA21007B6511 /* Golix */ = {
+			isa = PBXGroup;
+			children = (
+				A1F8D4041FBEEB2B007B6511 /* Golix.playground */,
+			);
+			path = Golix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
