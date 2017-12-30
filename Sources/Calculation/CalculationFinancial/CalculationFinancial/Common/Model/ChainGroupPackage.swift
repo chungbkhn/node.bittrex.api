@@ -26,5 +26,20 @@ extension Model {
 				moneyInvest = money
 			}
 		}
+
+		class Dragon: BasePackage {
+
+			var moneyInvest: Double = 0
+			var currentStep: Int = 0
+
+			let totalStep: Int = Constant.ChainGroup.totalDayPackage
+			let profitRate: Double = Constant.ChainGroup.profitRate
+			let refundCapitalBack: Bool = Constant.ChainGroup.refundCapitalBack
+			let invitationRate: Double = Constant.ChainGroup.invitationRate
+
+			required init(money: Double) {
+				moneyInvest = money
+			}
+		}
 	}
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633FBE821FBFF18B00B1C694 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FBE811FBFF18B00B1C694 /* Exchange.swift */; };
+		633FBE841FBFF1E300B1C694 /* ExchangeBittrex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FBE831FBFF1E300B1C694 /* ExchangeBittrex.swift */; };
+		633FBE861FBFF1EC00B1C694 /* ExchangeGolix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FBE851FBFF1EC00B1C694 /* ExchangeGolix.swift */; };
 		635C78A31F9CEAE5000437E6 /* RegalInvestment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78A21F9CEAE5000437E6 /* RegalInvestment.swift */; };
 		635C78A51F9CEB0E000437E6 /* RegalInvestmentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78A41F9CEB0E000437E6 /* RegalInvestmentBuilder.swift */; };
 		635C78A91F9CEB82000437E6 /* RegalPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C78A81F9CEB82000437E6 /* RegalPackage.swift */; };
@@ -45,6 +48,9 @@
 /* Begin PBXFileReference section */
 		338F2250A8384AF6F35C911D /* Pods-CalculationFinancial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculationFinancial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial.debug.xcconfig"; sourceTree = "<group>"; };
 		3BB92A4CA3087101EA7D65B1 /* Pods-CalculationFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculationFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial.release.xcconfig"; sourceTree = "<group>"; };
+		633FBE811FBFF18B00B1C694 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		633FBE831FBFF1E300B1C694 /* ExchangeBittrex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeBittrex.swift; sourceTree = "<group>"; };
+		633FBE851FBFF1EC00B1C694 /* ExchangeGolix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeGolix.swift; sourceTree = "<group>"; };
 		635C78A21F9CEAE5000437E6 /* RegalInvestment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegalInvestment.swift; sourceTree = "<group>"; };
 		635C78A41F9CEB0E000437E6 /* RegalInvestmentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegalInvestmentBuilder.swift; sourceTree = "<group>"; };
 		635C78A81F9CEB82000437E6 /* RegalPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegalPackage.swift; sourceTree = "<group>"; };
@@ -79,7 +85,6 @@
 		A1DA77F41F7221A000C26FF2 /* BitconnectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitconnectInfo.swift; sourceTree = "<group>"; };
 		A1DA77F91F72266E00C26FF2 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A1DA77FB1F72267900C26FF2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		A1F8D4041FBEEB2B007B6511 /* Golix.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Golix.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B6E1AB52B0711D47E20B936D /* Pods_CalculationFinancial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculationFinancial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +106,16 @@
 				B6E1AB52B0711D47E20B936D /* Pods_CalculationFinancial.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		633FBE801FBFF17E00B1C694 /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				633FBE811FBFF18B00B1C694 /* Exchange.swift */,
+				633FBE831FBFF1E300B1C694 /* ExchangeBittrex.swift */,
+				633FBE851FBFF1EC00B1C694 /* ExchangeGolix.swift */,
+			);
+			path = Exchange;
 			sourceTree = "<group>";
 		};
 		635C78A11F9CEAC3000437E6 /* Regal */ = {
@@ -141,6 +156,7 @@
 		A14DCC591F72595E00190639 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				633FBE801FBFF17E00B1C694 /* Exchange */,
 				63B6AB7A1F75833000D03586 /* BitconnectPackage.swift */,
 				63B6AB781F75830300D03586 /* ChainGroupPackage.swift */,
 				635C78B61F9CF8DF000437E6 /* HextraPackage.swift */,
@@ -238,7 +254,6 @@
 		A1F8D4031FBEEA21007B6511 /* Golix */ = {
 			isa = PBXGroup;
 			children = (
-				A1F8D4041FBEEB2B007B6511 /* Golix.playground */,
 			);
 			path = Golix;
 			sourceTree = "<group>";
@@ -354,10 +369,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -394,6 +411,7 @@
 				A14DCC721F7273F600190639 /* ChainGroupInvestmentBuilder.swift in Sources */,
 				63B6AB791F75830300D03586 /* ChainGroupPackage.swift in Sources */,
 				A14DCC761F72824D00190639 /* Constant+Bitconnect.swift in Sources */,
+				633FBE821FBFF18B00B1C694 /* Exchange.swift in Sources */,
 				A14DCC5B1F72596600190639 /* Model.swift in Sources */,
 				635C78B01F9CED46000437E6 /* ProductType.swift in Sources */,
 				A14DCC641F725F1400190639 /* Constant+ChainGroup.swift in Sources */,
@@ -405,8 +423,10 @@
 				A1DA77DA1F721BC400C26FF2 /* ViewController.swift in Sources */,
 				635C78AE1F9CECD5000437E6 /* ChartHelper.swift in Sources */,
 				A1DA77FA1F72266E00C26FF2 /* Util.swift in Sources */,
+				633FBE861FBFF1EC00B1C694 /* ExchangeGolix.swift in Sources */,
 				A14DCC6C1F7271F200190639 /* Package.swift in Sources */,
 				A1DA77F51F7221A000C26FF2 /* BitconnectInfo.swift in Sources */,
+				633FBE841FBFF1E300B1C694 /* ExchangeBittrex.swift in Sources */,
 				635C78B91F9CF902000437E6 /* Constant+Hextra.swift in Sources */,
 				635C78A31F9CEAE5000437E6 /* RegalInvestment.swift in Sources */,
 				635C78B71F9CF8DF000437E6 /* HextraPackage.swift in Sources */,

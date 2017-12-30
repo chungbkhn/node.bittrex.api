@@ -22,3 +22,18 @@ extension Constant {
 		static let startInvestedMoney: Double = 500
     }
 }
+
+extension Constant.ChainGroup {
+
+	struct XBot {
+
+		static let minMoneyReinvest: Double = 250
+		static let refundCapitalBack = false
+		static let stepMoneyReinvest: Double? = nil
+		static let invitationRate: Double = 0.05	// 5%
+		static let profitRate: Double = 0.03  // 3%/day
+		static let totalDay: Int = 90
+		static let totalDayPackage: Int = 90
+		static let startInvestedMoney: Double = 2500
+	}
+}
