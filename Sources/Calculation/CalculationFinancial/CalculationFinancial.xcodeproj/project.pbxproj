@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		338F2250A8384AF6F35C911D /* Pods-CalculationFinancial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculationFinancial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial.debug.xcconfig"; sourceTree = "<group>"; };
 		3BB92A4CA3087101EA7D65B1 /* Pods-CalculationFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculationFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculationFinancial/Pods-CalculationFinancial.release.xcconfig"; sourceTree = "<group>"; };
+		630844E41FF817CA0042FC31 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		63B6AB761F75785500D03586 /* BitconnectInvestmentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitconnectInvestmentBuilder.swift; sourceTree = "<group>"; };
 		63B6AB781F75830300D03586 /* ChainGroupPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainGroupPackage.swift; sourceTree = "<group>"; };
 		63B6AB7A1F75833000D03586 /* BitconnectPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitconnectPackage.swift; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 		A1DA77D61F721BC400C26FF2 /* CalculationFinancial */ = {
 			isa = PBXGroup;
 			children = (
+				630844E41FF817CA0042FC31 /* MyPlayground.playground */,
 				A1DA77F81F72266600C26FF2 /* Common */,
 				A1DA77F11F72219200C26FF2 /* ChainGroup */,
 				A1DA77EE1F72215900C26FF2 /* Bitconnect */,
